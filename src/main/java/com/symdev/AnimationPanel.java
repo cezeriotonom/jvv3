@@ -19,7 +19,7 @@ public class AnimationPanel extends JPanel implements ActionListener {
     private double currentAngle = 0;
 
     public AnimationPanel() {
-        setBackground(new Color(0, 114, 198)); // Windows 10 blue
+        setBackground(new Color(33, 37, 41)); // A dark grey, similar to dark blue grey
         trail = new LinkedList<>();
         Timer timer = new Timer(15, this); // ~66 FPS
         timer.start();
@@ -56,7 +56,7 @@ public class AnimationPanel extends JPanel implements ActionListener {
         Graphics2D g2d = (Graphics2D) g;
 
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g2d.setColor(Color.WHITE);
+        g2d.setColor(new Color(137, 25, 28)); // Teknofest Red (#89191C)
 
         // Draw each dot in the trail with decreasing opacity
         for (int i = 0; i < trail.size(); i++) {
