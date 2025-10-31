@@ -18,6 +18,7 @@ public class AnimationPanel extends JPanel implements ActionListener, MouseListe
     private final int DELAY = 10; // Milliseconds between updates
     private double gravity = 0.1;
     private final double BOUNCE_FACTOR = 0.7; // Energy loss on bounce
+    private final double FRICTION = 0.99; // Horizontal speed reduction on ground
     private boolean isDragging = false;
 
     public AnimationPanel() {
@@ -58,9 +59,16 @@ public class AnimationPanel extends JPanel implements ActionListener, MouseListe
         }
 
         // Check for collision with the floor (and bounce)
-        if (y > getHeight() - BALL_SIZE) {
+        if (y >= getHeight() - BALL_SIZE) {
             y = getHeight() - BALL_SIZE;
             dy *= -BOUNCE_FACTOR; // Reverse and reduce vertical velocity
+
+            // Apply friction when on the ground
+            dx *= FRICTION;
+            // Stop the ball if horizontal speed is very low
+            if (Math.abs(dx) < 0.1) {
+                dx = 0;
+            }
         }
 
         // Trigger a repaint
