@@ -1,0 +1,12 @@
+{
+  "project_id" : 733,
+  "project_name" : "jvv3",
+  "language" : "JAVA",
+  "ai_chat_id" : "1s7936e6iT_o0_lgAjgKusRu_EZa4e02o",
+  "symdev_account_email" : "cezeriotonom@gmail.com",
+  "llm_account_email" : "symdev.pro@gmail.com",
+  "github_repo_url" : "https://github.com/cezeriotonom/jvv3.git",
+  "build_command" : null,
+  "run_command" : null,
+  "open_browser_url" : null
+}
