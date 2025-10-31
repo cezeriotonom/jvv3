@@ -6,7 +6,7 @@
   "symdev_account_email" : "cezeriotonom@gmail.com",
   "llm_account_email" : "symdev.pro@gmail.com",
   "github_repo_url" : "https://github.com/cezeriotonom/jvv3.git",
-  "build_command" : "javac -d out src/main/java/com/symdev/App.java src/main/java/com/symdev/AnimationPanel.java src/main/java/com/symdev/Ball.java",
+  "build_command" : "javac -d out src/main/java/com/symdev/App.java src/main/java/com/symdev/AnimationPanel.java",
   "run_command" : "java -cp out com.symdev.App",
   "open_browser_url" : null
 }
