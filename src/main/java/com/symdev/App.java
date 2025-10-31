@@ -17,7 +17,25 @@ public class App {
             AnimationPanel animationPanel = new AnimationPanel();
             frame.getContentPane().add(animationPanel, BorderLayout.CENTER);
 
+            // Create a slider to control gravity
+            JSlider gravitySlider = new JSlider(0, 100, 10); // Min, Max, Initial
+            gravitySlider.setMajorTickSpacing(25);
+            gravitySlider.setMinorTickSpacing(5);
+            gravitySlider.setPaintTicks(true);
+            gravitySlider.setPaintLabels(true);
+
+            // Add a listener to update gravity in the animation panel
+            gravitySlider.addChangeListener(e -> {
+                JSlider source = (JSlider) e.getSource();
+                // Scale the slider value to a more appropriate gravity range
+                animationPanel.setGravity(source.getValue() / 100.0);
+            });
+
+            // Add the slider to the bottom of the frame
+            frame.getContentPane().add(gravitySlider, BorderLayout.SOUTH);
+
             // Display the window
+            frame.pack(); // Adjust frame size to fit components
             frame.setVisible(true);
         });
     }

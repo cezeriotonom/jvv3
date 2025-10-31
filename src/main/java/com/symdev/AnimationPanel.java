@@ -13,7 +13,7 @@ public class AnimationPanel extends JPanel implements ActionListener {
     private double dy = 0; // y velocity (using double for precision)
     private final int BALL_SIZE = 40;
     private final int DELAY = 10; // Milliseconds between updates
-    private final double GRAVITY = 0.1;
+    private double gravity = 0.1;
     private final double BOUNCE_FACTOR = 0.7; // Energy loss on bounce
 
     public AnimationPanel() {
@@ -22,10 +22,14 @@ public class AnimationPanel extends JPanel implements ActionListener {
         timer.start();
     }
 
+    public void setGravity(double gravity) {
+        this.gravity = gravity;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         // Apply gravity to vertical velocity
-        dy += GRAVITY;
+        dy += gravity;
 
         // Update ball position
         x += dx;
