@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
 import java.util.LinkedList;
+import java.awt.AlphaComposite; // Missing import added here
 
 public class AnimationPanel extends JPanel implements ActionListener {
 
