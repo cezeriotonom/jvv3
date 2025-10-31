@@ -13,12 +13,9 @@ public class App {
             frame.setMinimumSize(new Dimension(800, 600));
             frame.setLocationRelativeTo(null); // Center the window
 
-            // Create a label with the message
-            JLabel label = new JLabel("Hello SymDev AI", SwingConstants.CENTER);
-            label.setFont(new Font("Arial", Font.BOLD, 24));
-
-            // Add the label to the frame's content pane
-            frame.getContentPane().add(label, BorderLayout.CENTER);
+            // Create and add the animation panel
+            AnimationPanel animationPanel = new AnimationPanel();
+            frame.getContentPane().add(animationPanel, BorderLayout.CENTER);
 
             // Display the window
             frame.setVisible(true);
